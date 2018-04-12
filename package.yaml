@@ -1,6 +1,6 @@
 name: eventlogs
 version: '0.0.0'
-github: "jship/eventlogs"
+github: "jship/haskell-eventlogs-talk"
 license: MIT
 author: "Jason Shipman"
 maintainer: "Jason Shipman"
