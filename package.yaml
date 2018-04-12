@@ -1,0 +1,49 @@
+name: eventlogs
+version: '0.0.0'
+github: "jship/eventlogs"
+license: MIT
+author: "Jason Shipman"
+maintainer: "Jason Shipman"
+synopsis: Dev talk for eventlog stuff.
+description: Dev talk for eventlog stuff.
+category: Other
+
+extra-source-files:
+- LICENSE.md
+- package.yaml
+- README.md
+- stack.yaml
+
+ghc-options:
+- -Wall
+- -Werror
+- -rtsopts
+- -threaded
+- '"-with-rtsopts=-N -T"'
+- -O2
+- -eventlog
+
+dependencies:
+- async
+- base
+- deepseq
+
+executables:
+  1-single-thread:
+    source-dirs: executables/1-single-thread
+    main: Main.hs
+  2-single-thread-with-label:
+    source-dirs: executables/2-single-thread-with-label
+    main: Main.hs
+  3-two-threads:
+    source-dirs: executables/3-two-threads
+    main: Main.hs
+  4-two-threads-traced:
+    source-dirs: executables/4-two-threads-traced
+    main: Main.hs
+  5-two-threads-fixed:
+    source-dirs: executables/5-two-threads-fixed
+    main: Main.hs
+  6-two-threads-totally-separate:
+    source-dirs: executables/6-two-threads-totally-separate
+    main: Main.hs
