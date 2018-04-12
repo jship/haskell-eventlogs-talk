@@ -14,7 +14,7 @@ stack exec 4-two-threads-traced -- +RTS -l
 stack exec 5-two-threads-fixed -- +RTS -l
 stack exec 6-two-threads-totally-separate -- +RTS -l
 
-# Look at generated .eventlog files with
+# Look at generated .eventlog files with `ThreadScope` and `ghc-events`.
 ```
 
 ## Tools
