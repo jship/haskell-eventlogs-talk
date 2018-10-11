@@ -2,7 +2,6 @@ module Main (main) where
 
 import Control.Concurrent.Async (asyncThreadId, wait, withAsync)
 import Control.Exception (evaluate)
-import Control.DeepSeq (force)
 import Debug.Trace (traceEventIO)
 import GHC.Conc (labelThread, myThreadId)
 
@@ -22,7 +21,7 @@ main = do
 
 doWork :: IO Integer
 doWork = do
-  result <- evaluate . force . fib $ 35
+  result <- evaluate . fib $ 35
   traceEventIO "doWork: returning..."
   pure result
 
